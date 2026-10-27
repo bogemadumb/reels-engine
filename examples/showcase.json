@@ -1,0 +1,15 @@
+{
+  "name": "showcase",
+  "channel": "challenge",
+  "header": { "left": "ai30", "right": "тест сцен" },
+  "scenes": [
+    { "type": "chart", "duration": 4, "kicker": "неделя 1", "title": "Куда ушло *время*", "unit": " ч",
+      "bars": [ { "label": "Игры", "value": 21, "accent": true }, { "label": "Бот за Stars", "value": 4 }, { "label": "Публикация", "value": 6 } ],
+      "caption": "Пример сцены chart с выдуманными цифрами." },
+    { "type": "checklist", "duration": 4, "title": "Ставки", "items": [
+      { "text": "Бот за Stars", "state": "fail", "note": "похоронен за час" },
+      { "text": "Браузерные игры", "state": "done" },
+      { "text": "Ещё не решено", "state": "todo" } ] },
+    { "type": "counter", "duration": 3.5, "label": "День 3", "prefix": "заработано:", "from": 0, "to": 1250, "unit": "₽", "sub": "пример счёта вверх" }
+  ]
+}

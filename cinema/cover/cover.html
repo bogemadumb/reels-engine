@@ -1,0 +1,29 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Обложка ролика Челлендж</title><link rel="stylesheet" href="base.css"><script src="common.js"></script></head>
+<body style="width:1080px;height:1920px" data-safe="72,270,1008,1650"><div id="r"></div>
+<script>
+// desktop-cinema covers: the "Челлендж" cover template of Брендкит v2 filled per clip (all text inside 936x1380)
+const CFG = {
+  demo1: { n: 1, l1: 'ЗАГОЛОВОК', l2: 'РОЛИКА', card: ['рубрика · дата', 'Короткая подпись<br>в две строки', 'МЕТКА'], phone: 'media/game1-merge.png' },
+  demo2: { n: 2, date: '01.01', l1: 'ВТОРОЙ', l2: 'ШАБЛОН', card: ['рубрика · дата', 'Карточка с окном<br>справа', 'МЕТКА'], win: 'media/print-27.jpg' }
+};
+const id = location.hash.slice(1) || 'demo1', C = CFG[id];
+const dg = x => C.mono ? x.replace(/\d[\d,.:]*/g, m => `<span style="font-family:JBM;font-weight:800">${m}</span>`) : x;
+const N = C.n;
+let dots = '';
+for (let i = 0; i < 30; i++) dots += `<i style="display:block;width:22px;height:22px;border-radius:50%;${i < N ? 'background:var(--co)' : 'border:4px solid #A9B1C6'};${i === N - 1 ? 'box-shadow:0 0 0 8px rgba(255,90,69,.25)' : ''}"></i>`;
+let h = `<div class="dots"></div>
+<div class="blob" data-deco style="left:-300px;top:-240px;width:900px;height:900px;background:var(--peach)"></div>
+<div class="blob" data-deco style="left:560px;top:1180px;width:900px;height:900px;background:var(--lav)"></div>
+<div class="blob" data-deco style="left:640px;top:140px;width:520px;height:520px;background:var(--mint)"></div>
+<div class="abs" style="left:72px;top:296px;width:936px;display:flex;justify-content:space-between"><span class="pill co" style="height:64px;font-size:30px;padding:0 28px">[${C.tag || 'ДЕНЬ ' + N + '/30'}]</span><span class="pill" style="height:64px;font-size:30px;padding:0 28px">${C.score || '0 ₽'} · на ${C.date || '12.10'}</span></div>
+<div class="abs" style="left:72px;top:398px;width:936px;display:flex;justify-content:space-between;align-items:center">${dots}</div>
+<div class="abs" style="left:72px;top:500px;width:936px"><div class="u fit" data-fit="936" style="font-size:230px;line-height:1.1;display:block">${dg(C.l1)}</div><div style="display:inline-block;margin-top:14px"><span class="u fit" data-fit="936" style="font-size:150px;line-height:1.05;background:var(--co);color:var(--ink);padding:0 34px 12px;border-radius:40px;display:inline-block">${dg(C.l2)}</span></div></div>`;
+if (C.tt) h += `<div class="phone" data-deco style="left:690px;top:960px;width:270px;height:560px;transform:perspective(1800px) rotateY(-14deg) rotateX(3deg) rotateZ(4deg)"><div class="scr" style="background:#121318"><div class="isl"></div><div style="position:absolute;left:14px;right:14px;top:70px;border-radius:22px;background:#fff;padding:18px 16px;font-family:Manrope,sans-serif"><div style="display:flex;gap:10px;align-items:center"><span style="width:34px;height:30px;background:var(--co);clip-path:polygon(50% 0,100% 100%,0 100%);flex:none"></span><b style="font-size:19px;line-height:1.1;color:var(--ink)">Post not created</b></div><div style="font-weight:800;font-size:18px;line-height:1.35;color:var(--ink);margin-top:12px"><span style="background:linear-gradient(var(--co),var(--co)) no-repeat;background-size:100% 42%;background-position:0 92%">Spam</span> and Deceptive Account Behaviours</div></div><div style="position:absolute;left:14px;right:14px;top:300px;border-radius:22px;background:#22242E;padding:16px;font:800 17px Manrope,sans-serif;color:#8F94AB;filter:grayscale(1)">аккаунт для публикаций<div style="font-size:22px;color:var(--co);margin-top:6px">апелляций: 0</div></div></div></div>`;
+if (C.phone) h += phone({ x: 690, y: 960, w: 270, h: 560, img: C.phone, tf: 'perspective(1800px) rotateY(-14deg) rotateX(3deg) rotateZ(4deg)' });
+if (C.win) h += `<div class="win" data-deco style="left:560px;top:1010px;width:420px;transform:perspective(1800px) rotateY(-14deg) rotateX(3deg) rotateZ(4deg)"><div class="tb"><i></i><i></i><i></i><b>витрина</b></div><div class="cnt" style="height:260px"><img src="${C.win}" style="object-position:center"></div></div>`;
+if (C.side) h += C.side;
+h += `<div class="card" data-deco style="left:100px;top:1040px;width:${C.win || C.side ? 520 : 620}px;height:430px;padding:44px 46px;border-radius:40px;transform:perspective(1800px) rotateY(10deg) rotateX(3deg) rotateZ(-3deg)"><div class="mono" style="font-size:24px;color:var(--muted)">${C.card[0]}</div><div style="font-weight:800;font-size:${C.card[1].length > 48 ? 38 : 42}px;line-height:1.28;margin-top:22px">${dg(C.card[1])}</div><div style="position:absolute;left:46px;bottom:36px"><span class="pill ink" style="height:54px;font-size:24px;padding:0 24px">${C.card[2]}</span></div></div>`;
+h += `<div class="abs" style="left:72px;top:1500px">${ledBox(150, { grid: 22, state: 'smile' }, 'transform:rotate(-4deg)')}</div>
+<div class="abs" data-clip style="left:250px;top:1560px;width:758px;height:80px;display:flex;align-items:center;justify-content:space-between"><span class="u" style="font-size:36px">Мой канал</span><span class="mono" style="font-size:28px;color:var(--muted)">@mychannel</span></div>`;
+document.getElementById('r').innerHTML = h; ready();
+</script></body></html>

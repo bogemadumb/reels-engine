@@ -1,0 +1,9 @@
+node_modules/
+out/
+voice-cache/
+.DS_Store
+channels.json
+voices.json
+*.log
+cinema/build/
+cinema/media/

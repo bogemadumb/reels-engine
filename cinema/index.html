@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="/cinema/fonts.css">
+<link rel="stylesheet" href="/cinema/cinema.css">
+</head>
+<body>
+<div id="fx">
+  <div id="stage"><div id="world"></div></div>
+  <div id="hud"></div>
+  <div id="hdr"></div>
+  <div id="plates"></div>
+  <div id="agent"></div>
+  <div id="caps"></div>
+  <div id="cur"></div>
+  <div id="cover"></div>
+</div>
+<script>
+  const q = new URLSearchParams(location.search);
+  window.CLIPID = q.get('clip');
+  const load = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = () => rej(new Error('load ' + src)); document.head.appendChild(s); });
+  window.boot = (async () => {
+    window.TIMING = await (await fetch(`/cinema/build/${CLIPID}/timing.json`)).json();
+    await load(`/cinema/build/${CLIPID}/voice.js`);
+    await load('/cinema/common.js');
+    await load('/cinema/runtime.js');
+    await load('/cinema/parts.js');
+    await load(`/cinema/clips/${CLIPID}.js`);
+    await window.S.start();
+  })();
+  window.ready = window.boot;
+</script>
+</body></html>

@@ -1,0 +1,30 @@
+@font-face{font-family:"Unbounded";src:url(fonts/Unbounded-var.ttf);font-weight:200 900}
+@font-face{font-family:"Manrope";src:url(fonts/Manrope-var.ttf);font-weight:200 800}
+@font-face{font-family:"JBM";src:url(fonts/JetBrainsMono-var.ttf);font-weight:100 800}
+:root{--ink:#14151C;--cob:#2D4BFF;--co:#FF5A45;--cy:#19D8FF;--pk:#FF4F9A;--paper:#EEF1F6;--white:#fff;--lav:#D4DCFF;--peach:#FFD9D1;--mint:#C6F1E6;--muted:#6B7083;--dot:#B8C0D2;--sh:0 2px 4px rgba(20,22,40,.12),0 24px 50px rgba(20,22,60,.20),0 70px 130px rgba(20,22,60,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper)}
+body{position:relative;overflow:hidden;color:var(--ink);font-family:"Manrope",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.abs{position:absolute}
+.nowrap{white-space:nowrap}
+.fit{display:inline-block;white-space:nowrap}
+.u{font-family:"Unbounded",sans-serif;font-weight:900;letter-spacing:-.01em}
+.mono{font-family:"JBM",monospace;font-weight:700}
+.dots{position:absolute;inset:0;background-image:radial-gradient(circle,var(--dot) 3px,transparent 3.5px);background-size:64px 64px}
+.blob{position:absolute;border-radius:50%}
+.win{position:absolute;background:#fff;border-radius:30px;overflow:hidden;box-shadow:var(--sh)}
+.tb{height:56px;background:#F4F5F8;display:flex;align-items:center;padding:0 22px;gap:11px;border-bottom:2px solid #E6E8EE}
+.tb i{width:16px;height:16px;border-radius:50%;background:#D5D9E2;display:block}
+.tb i:first-child{background:#FF5F57}
+.tb b{margin-left:18px;flex:1;height:30px;border-radius:15px;background:#E7EAF1;font:600 16px/30px "JBM";color:#6B7083;padding:0 16px;white-space:nowrap;overflow:hidden}
+.cnt{position:relative;overflow:hidden;background:#fff}
+.cnt img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.phone{position:absolute;background:#0C0D12;border-radius:74px;padding:20px;box-shadow:0 2px 4px rgba(20,20,40,.2),0 26px 50px rgba(20,22,60,.25),0 80px 140px rgba(20,22,60,.22),inset 0 0 0 3px #2A2C36}
+.phone .scr{position:relative;border-radius:56px;overflow:hidden;background:#000;width:100%;height:100%}
+.phone .scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.phone .isl{position:absolute;left:50%;top:18px;width:30%;height:4%;border-radius:20px;background:#050507;transform:translateX(-50%);z-index:3}
+.card{position:absolute;background:#fff;border-radius:44px;box-shadow:var(--sh)}
+.pill{display:inline-flex;align-items:center;gap:14px;height:76px;padding:0 34px;border-radius:38px;background:#fff;box-shadow:0 2px 4px rgba(20,22,40,.10),0 14px 30px rgba(20,22,60,.14);font-family:"JBM";font-weight:700;font-size:34px;white-space:nowrap}
+.pill.cob{background:var(--cob);color:#fff}
+.pill.co{background:var(--co);color:var(--ink)}
+.pill.ink{background:var(--ink);color:#fff}

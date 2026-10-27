@@ -1,0 +1,17 @@
+{
+  "name": "reels-engine",
+  "version": "1.0.0",
+  "description": "Code-driven motion graphics for vertical short videos: JSON script -> deterministic frames -> MP4",
+  "main": "render.js",
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  },
+  "license": "MIT",
+  "author": "bogemadumb",
+  "engines": {
+    "node": ">=18"
+  }
+}

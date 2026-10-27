@@ -1,0 +1,68 @@
+{
+  "challenge": {
+    "label": "mychannel",
+    "accent": "#C6FF3D",
+    "accentInk": "#0B0B0A",
+    "bg": "#0B0B0A",
+    "panel": "#151513",
+    "fg": "#F2EFE6",
+    "muted": "#9A9890",
+    "danger": "#FF5A4E",
+    "hair": "rgba(154,152,144,0.38)",
+    "bgStyle": "flat",
+    "grain": 0.07,
+    "capFont": "JetBrains Mono",
+    "capWeight": 700,
+    "headerStyle": "ticks",
+    "vtext": "MYCHANNEL · ЧЕЛЛЕНДЖ · 2026",
+    "timerTick": true,
+    "mute": [
+      "whoosh",
+      "swish",
+      "hit",
+      "pop"
+    ],
+    "music": {
+      "style": "ambient",
+      "bpm": 56,
+      "root": 50,
+      "seed": 30,
+      "mode": "dark",
+      "cutoff": 900,
+      "vol": 0.5
+    }
+  },
+  "infra": {
+    "label": "mychannel",
+    "accent": "#FFB547",
+    "accentInk": "#0B0B0A",
+    "bg": "#0B0B0A",
+    "panel": "#151513",
+    "fg": "#F2EFE6",
+    "muted": "#9A9890",
+    "danger": "#FF5A4E",
+    "hair": "rgba(154,152,144,0.38)",
+    "bgStyle": "dots",
+    "grain": 0.05,
+    "capFont": "Manrope",
+    "capWeight": 800,
+    "headerStyle": "dots",
+    "vtext": "MYCHANNEL · ИНФРАСТРУКТУРА · 2026",
+    "timerTick": false,
+    "mute": [
+      "whoosh",
+      "swish",
+      "hit",
+      "pop"
+    ],
+    "music": {
+      "style": "ambient",
+      "bpm": 56,
+      "root": 45,
+      "seed": 7,
+      "mode": "minor",
+      "cutoff": 800,
+      "vol": 0.5
+    }
+  }
+}

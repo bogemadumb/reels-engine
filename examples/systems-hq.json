@@ -1,0 +1,177 @@
+{
+  "name": "systems-hq",
+  "channel": "infra",
+  "fps": 30,
+  "header": {
+    "left": "systems",
+    "right": "штаб · 01"
+  },
+  "cover": {
+    "t": 2.6
+  },
+  "scenes": [
+    {
+      "type": "headline",
+      "duration": 3.2,
+      "kicker": "Разбор системы",
+      "text": "Как устроен мой *цифровой штаб*",
+      "voice": "Как устроен мой *цифровой штаб*.",
+      "minDuration": 2.6
+    },
+    {
+      "type": "flow",
+      "nodes": [
+        {
+          "id": "mac",
+          "label": "Мак",
+          "sub": "здесь я думаю",
+          "icon": "mac",
+          "x": 0.2374,
+          "y": 0.165,
+          "part": 0
+        },
+        {
+          "id": "agents",
+          "label": "Агенты Claude",
+          "sub": "делают руками",
+          "icon": "agent",
+          "x": 0.2374,
+          "y": 0.5,
+          "part": 1
+        },
+        {
+          "id": "pc",
+          "label": "Домашний ПК",
+          "sub": "тяжёлые расчёты",
+          "icon": "pc",
+          "x": 0.7626,
+          "y": 0.165,
+          "part": 2
+        },
+        {
+          "id": "vps",
+          "label": "Сервер",
+          "sub": "работает 24/7",
+          "icon": "server",
+          "x": 0.7626,
+          "y": 0.5,
+          "part": 3
+        },
+        {
+          "id": "crm",
+          "label": "CRM",
+          "sub": "всё сходится тут",
+          "icon": "crm",
+          "x": 0.2374,
+          "y": 0.835,
+          "part": 4
+        },
+        {
+          "id": "bots",
+          "label": "Боты в Telegram",
+          "sub": "и напоминают",
+          "icon": "telegram",
+          "x": 0.7626,
+          "y": 0.835,
+          "part": 5
+        }
+      ],
+      "edges": [
+        {
+          "from": "mac",
+          "to": "agents"
+        },
+        {
+          "from": "mac",
+          "to": "pc"
+        },
+        {
+          "from": "mac",
+          "to": "vps"
+        },
+        {
+          "from": "pc",
+          "to": "vps"
+        },
+        {
+          "from": "agents",
+          "to": "crm"
+        },
+        {
+          "from": "vps",
+          "to": "crm"
+        },
+        {
+          "from": "vps",
+          "to": "bots"
+        },
+        {
+          "from": "crm",
+          "to": "bots"
+        }
+      ],
+      "voice": [
+        "Мак — здесь я думаю.",
+        {
+          "text": "Агенты *Claude* делают всё руками.",
+          "say": "Агенты Клод делают всё руками."
+        },
+        {
+          "text": "Домашний ПК считает тяжёлое.",
+          "say": "Домашний пэ-ка считает тяжёлое."
+        },
+        "Сервер не спит.",
+        {
+          "text": "*CRM* — всё сходится тут.",
+          "say": "Си-эр-эм — всё сходится тут."
+        },
+        {
+          "text": "Боты пишут в Telegram.",
+          "say": "Боты пишут в Телеграм."
+        }
+      ],
+      "duration": 10
+    },
+    {
+      "type": "checklist",
+      "duration": 6.0,
+      "title": "Кто что *делает*",
+      "items": [
+        {
+          "text": "Мак — решает"
+        },
+        {
+          "text": "Агенты — исполняют"
+        },
+        {
+          "text": "ПК — считает"
+        },
+        {
+          "text": "Сервер — не спит"
+        },
+        {
+          "text": "Боты — пишут в Telegram"
+        }
+      ],
+      "voice": "Каждый узел делает одно дело.",
+      "minDuration": 4.0
+    },
+    {
+      "type": "headline",
+      "duration": 3.4,
+      "kicker": "Дальше",
+      "text": "Разберу каждый узел — *подпишись*",
+      "voice": "Разберу каждый узел — *подпишись*.",
+      "minDuration": 2.6
+    }
+  ],
+  "voiceover": {
+    "provider": "edge",
+    "voice": "ru-RU-DmitryNeural",
+    "rate": "+8%",
+    "lead": 0.25,
+    "pad": 0.4,
+    "gap": 0.2,
+    "musicGain": 0.8
+  }
+}

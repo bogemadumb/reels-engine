@@ -1,0 +1,176 @@
+{
+  "name": "ai30-day1",
+  "channel": "challenge",
+  "fps": 30,
+  "header": {
+    "left": "ai30",
+    "right": "день 1/30"
+  },
+  "cover": {
+    "t": 2.4
+  },
+  "music": {
+    "enabled": true
+  },
+  "voiceover": {
+    "provider": "edge",
+    "voice": "ru-RU-DmitryNeural",
+    "rate": "+8%",
+    "lead": 0.15,
+    "pad": 0.3,
+    "gap": 0.15,
+    "musicGain": 0.8
+  },
+  "scenes": [
+    {
+      "type": "headline",
+      "duration": 3.4,
+      "kicker": "День 1 / 30",
+      "text": "Я дал *ИИ* 30 дней заработать хоть *рубль*",
+      "voice": [
+        {
+          "text": "Я дал *ИИ* тридцать дней заработать хоть *рубль*",
+          "say": "Я дал и-и тридцать дней заработать хоть рубль."
+        }
+      ],
+      "minDuration": 2.6
+    },
+    {
+      "type": "chat",
+      "duration": 5.0,
+      "aiName": "ИИ",
+      "status": "печатает…",
+      "messages": [
+        {
+          "from": "human",
+          "text": "30 дней. Заработаешь хоть рубль — продлеваю подписку."
+        },
+        {
+          "from": "ai",
+          "text": "А если нет?"
+        },
+        {
+          "from": "human",
+          "text": "Тогда *СВО*."
+        },
+        {
+          "from": "ai",
+          "text": "Понял. Начинаю прямо сейчас."
+        }
+      ],
+      "voice": [
+        {
+          "text": "Рубль — подписка. Ноль — *СВО*.",
+          "say": "Рубль — подписка. Ноль — эс-вэ-о."
+        }
+      ],
+      "minDuration": 4.4
+    },
+    {
+      "type": "terminal",
+      "duration": 5.0,
+      "kicker": "ставка №1",
+      "title": "Бот за *Telegram Stars*",
+      "windowTitle": "claude — stars-bot",
+      "height": 470,
+      "cps": 30,
+      "lines": [
+        {
+          "cmd": "claude \"сделай бота, который продаёт за Stars\""
+        },
+        {
+          "out": "+ бот написан",
+          "tone": "ok",
+          "gap": 0.35
+        },
+        {
+          "out": "+ задеплоен на сервер",
+          "tone": "ok",
+          "gap": 0.45
+        },
+        {
+          "out": "… ждём покупателей",
+          "tone": "muted",
+          "gap": 0.6
+        },
+        {
+          "out": "x похоронен через 1 час",
+          "tone": "err"
+        }
+      ],
+      "voice": [
+        {
+          "text": "Ставка №1: бот за Stars. Похоронен за час.",
+          "say": "Ставка номер один: бот за Телеграм Старс. Похоронен за час."
+        }
+      ],
+      "minDuration": 4.6
+    },
+    {
+      "type": "browser",
+      "duration": 3.4,
+      "kicker": "ставка №3",
+      "title": "*Браузерные* игры",
+      "url": "yandex.ru/games",
+      "image": "media/game4-desktop.png",
+      "badge": "4 игры",
+      "badgeAt": 1.0,
+      "voice": "Ставка номер три — браузерные игры.",
+      "minDuration": 2.8
+    },
+    {
+      "type": "phone",
+      "duration": 8.4,
+      "screens": [
+        {
+          "image": "media/game1-merge.png",
+          "title": "От вишни до *галактики*"
+        },
+        {
+          "image": "media/game2-blocks.png",
+          "title": "Блок *Блиц*"
+        },
+        {
+          "image": "media/game3-sort.png",
+          "title": "Сортировка *шаров*"
+        },
+        {
+          "image": "media/game4-shawarma.png",
+          "title": "Шаурма *Тайкун*"
+        }
+      ],
+      "voice": [
+        "Игра первая: слияние.",
+        "Вторая: пазл с линиями.",
+        "Третья: сортировка шаров.",
+        "Четвёртая: шаурма-империя."
+      ]
+    },
+    {
+      "type": "counter",
+      "duration": 4.4,
+      "label": "День 1",
+      "prefix": "заработано:",
+      "from": 0,
+      "to": 0,
+      "roll": true,
+      "rollMax": 999,
+      "unit": "₽",
+      "startAt": 0.55,
+      "countDur": 1.3,
+      "stamp": "пока",
+      "stampTop": 430,
+      "stampRight": 40,
+      "voice": "Итог первого дня — ноль рублей.",
+      "minDuration": 3.6
+    },
+    {
+      "type": "headline",
+      "duration": 3.6,
+      "kicker": "день 2 — дальше",
+      "text": "Подпишись — узнаешь, *выживу* ли я",
+      "voice": "Подпишись — узнаешь, *выживу* ли я.",
+      "minDuration": 2.6
+    }
+  ]
+}

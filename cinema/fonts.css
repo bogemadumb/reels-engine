@@ -1,0 +1,4 @@
+@font-face{font-family:'Unbounded';src:url(/assets/fonts/Unbounded-var.ttf);font-weight:200 900}
+@font-face{font-family:'Manrope';src:url(/assets/fonts/Manrope-var.ttf);font-weight:200 800}
+@font-face{font-family:'JBMono';src:url(/assets/fonts/JetBrainsMono-var.ttf);font-weight:100 800}
+html,body{margin:0;background:#EEF1F6;overflow:hidden}
